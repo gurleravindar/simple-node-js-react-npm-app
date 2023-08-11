@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'linux_node'}
     // agent {
     //     docker {
     //         image 'node:lts-buster-slim'
@@ -10,7 +10,7 @@ pipeline {
     //     CI = 'true'
     // }
   tools {
-    nodejs 'nodejs'
+    nodejs 'nodejs-16.20.2'
   }
     stages {
         stage('Clone repo'){
